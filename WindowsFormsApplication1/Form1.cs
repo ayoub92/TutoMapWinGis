@@ -29,7 +29,34 @@ namespace WindowsFormsApplication1
            int layer2=  axMap1.AddLayer(sp1, true);
            axMap1.set_ShapeLayerLineColor(layer2, (UInt32)(System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Red)));
            axMap1.set_ShapeLayerLineWidth(layer2, 5);
+        
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmZoomIn;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmZoomOut;
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmNone;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmPan;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            axMap1.ZoomToMaxExtents();
 
         }
     }
